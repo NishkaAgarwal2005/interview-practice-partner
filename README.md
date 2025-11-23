@@ -76,3 +76,56 @@ In-memory SessionManager stores the ongoing context, topics covered, and user in
 │   • Feedback synthesis                                  │
 └─────────────────────────────────────────────────────────┘
 ```
+---
+## Project Structure
+```
+interview-practice-partner/
+├── server/
+│ ├── index.js # Express routes & API endpoints
+│ ├── agents/
+│ │ ├── interviewAgent.js # Core interview logic
+│ │ ├── feedbackAgent.js # Feedback engine
+│ │ └── prompts.js # Role contexts
+│ └── utils/
+│ └── sessionManager.js # Session state manager
+├── public/
+│ ├── index.html # Frontend UI
+│ ├── styles.css # Styling (dark theme)
+│ └── app.js # Voice & chat logic
+├── package.json
+├── .env
+└── README.md
+```
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js 18 or higher  
+- Google Gemini API key  
+  Get from: https://aistudio.google.com/app/apikey
+
+---
+
+### Installation
+
+```bash
+# Clone repository
+git clone <your-repo-url>
+cd interview-practice-partner
+
+# Install dependencies
+npm install
+## API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| /api/start-interview | POST | Start new interview session |
+| /api/respond | POST | Submit answer & get next question |
+| /api/feedback | POST | Generate final interview report |
+| /api/clarify | POST | Handle confused user queries |
+| /api/session/:id | GET | Retrieve session data |
+
+
+
+
+
