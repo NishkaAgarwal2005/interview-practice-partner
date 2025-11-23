@@ -51,4 +51,25 @@ In-memory SessionManager stores the ongoing context, topics covered, and user in
 ---
 
 ## Architecture
-
+┌─────────────────────────────────────────────────────────┐
+│ Browser (Frontend) │
+│ • Web Speech API for voice I/O │
+│ • Chat interface │
+│ • Feedback display │
+└─────────────────────────────────────────────────────────┘
+│
+┌─────────────────────────────────────────────────────────┐
+│ Express.js Backend Server │
+├─────────────────────────────────────────────────────────┤
+│ SessionManager • Maintains context and history │
+│ InterviewAgent • Dynamic interviewer logic │
+│ FeedbackAgent • Final feedback generation │
+│ Prompts • Role-specific interview contexts │
+└─────────────────────────────────────────────────────────┘
+│
+┌─────────────────────────────────────────────────────────┐
+│ Google Gemini 2.0 Flash API │
+│ • Question generation │
+│ • User intent detection │
+│ • Feedback synthesis │
+└─────────────────────────────────────────────────────────┘
