@@ -115,6 +115,8 @@ cd interview-practice-partner
 
 # Install dependencies
 npm install
+
+```
 ## API Endpoints
 
 | Endpoint | Method | Description |
@@ -125,6 +127,14 @@ npm install
 | /api/clarify | POST | Handle confused user queries |
 | /api/session/:id | GET | Retrieve session data |
 
+
+## Limitations & Future Improvements
+
+- Add multilingual interview support  
+- Add database for saving user history  
+- More detailed analytics dashboard  
+- Improved speech naturalness  
+- Support for custom interview roles  
 
 
 
