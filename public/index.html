@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Practice Partner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Setup Screen -->
+    <div id="setup-screen" class="screen active">
+      <div class="container">
+        <h1> Interview Practice Partner</h1>
+        <p class="subtitle">AI-powered mock interviews with real-time feedback</p>
+        
+        <div class="setup-form">
+          <div class="form-group">
+            <label for="role">What role are you interviewing for?</label>
+            <select id="role">
+              <option value="software-engineer">Software Engineer</option>
+              <option value="sales">Sales</option>
+              <option value="retail-associate">Retail Associate</option>
+              <option value="product-manager">Product Manager</option>
+              <option value="marketing">Marketing</option>
+              <option value="data-analyst">Data Analyst</option>
+              <option value="customer-support">Customer Support</option>
+              <option value="general">General / Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="experience">Experience Level</label>
+            <select id="experience">
+              <option value="entry-level">Entry Level (0-2 years)</option>
+              <option value="mid-level" selected>Mid Level (2-5 years)</option>
+              <option value="senior">Senior (5-10 years)</option>
+              <option value="lead">Lead / Principal (10+ years)</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Focus Areas (optional)</label>
+            <div class="checkbox-group" id="focus-areas">
+              <label><input type="checkbox" value="behavioral"> Behavioral</label>
+              <label><input type="checkbox" value="technical"> Technical</label>
+              <label><input type="checkbox" value="situational"> Situational</label>
+              <label><input type="checkbox" value="leadership"> Leadership</label>
+            </div>
+          </div>
+          
+          <button id="start-btn" class="btn primary">Start Interview</button>
+        </div>
+        
+        <div class="tips">
+          <h3>Tips for best experience</h3>
+          <ul>
+            <li>Use a microphone for voice mode (recommended)</li>
+            <li>Speak clearly and take your time</li>
+            <li>Answer as you would in a real interview</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interview Screen -->
+    <div id="interview-screen" class="screen">
+      <div class="interview-container">
+        <div class="interview-header">
+          <div class="status">
+            <!-- <span id="question-counter">Question 1 of 6</span> -->
+            <span id="interview-status" class="status-badge">In Progress</span>
+          </div>
+          <button id="end-early-btn" class="btn secondary small">End Interview</button>
+        </div>
+        
+        <div id="chat-container">
+          <div id="messages"></div>
+        </div>
+        
+        <div class="input-area">
+          <div class="voice-controls">
+            <button id="voice-btn" class="btn voice" title="Hold to speak">
+              <span class="mic-icon">🎤</span>
+              <span class="voice-text">Hold to Speak</span>
+            </button>
+            <div id="voice-status" class="voice-status"></div>
+          </div>
+          
+          <div class="text-input-wrapper">
+            <textarea id="text-input" placeholder="Or type your response here..." rows="2"></textarea>
+            <button id="send-btn" class="btn primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Screen -->
+    <div id="feedback-screen" class="screen">
+      <div class="feedback-container">
+        <h1>Interview Feedback</h1>
+        <div id="feedback-content">
+          <div class="loading">Analyzing your interview...</div>
+        </div>
+        <button id="restart-btn" class="btn primary">Practice Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

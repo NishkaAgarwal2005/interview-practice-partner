@@ -1,0 +1,17 @@
+{
+  "name": "interview-practice-partner",
+  "version": "1.0.0",
+  "description": "AI-powered interview practice chatbot with voice support",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "uuid": "^9.0.0"
+  }
+}
